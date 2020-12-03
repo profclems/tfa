@@ -62,7 +62,7 @@ scoop:
   # Repository to push the app manifest to.
   bucket:
     owner: profclems
-    name: scoop-tfa
+    name: scoop-glab
   commit_author:
     name: Clement Sam
     email: clementsam75@gmail.com
@@ -70,9 +70,6 @@ scoop:
   homepage: "https://github.com/profclems/tfa"
   description: "Super cool two-factor authentication command line app"
   license: MIT
-  persist:
-    - ".tfa-cli"
-    - ".env"
 
 brews:
   - name: tfa
