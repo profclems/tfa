@@ -236,8 +236,8 @@ github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINE
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/posener/complete v1.1.1/go.mod h1:em0nMJCgc9GFtwrmVmEMR/ZL6WyhyjMBndrE9hABlRI=
-github.com/profclems/glab v1.12.0 h1:nGpYM5f+fJUskqe7Ttztkb43xyij4mO3RKqJCtCijJg=
-github.com/profclems/glab v1.12.0/go.mod h1:fTxFBUaS6Y1KnzqjHzpCKGaawNGiSkJoOt4BLyl1FOc=
+github.com/profclems/glab v1.12.1 h1:0VqnC4n9tf5figNupFmBBoU9/bEi0lFUljelQ6lp718=
+github.com/profclems/glab v1.12.1/go.mod h1:fTxFBUaS6Y1KnzqjHzpCKGaawNGiSkJoOt4BLyl1FOc=
 github.com/profclems/go-dotenv v0.1.1 h1:t+JjAwSHxBFlkqnWmc4ZHUHU8w4i5dYjLLWE5xK9OYk=
 github.com/profclems/go-dotenv v0.1.1/go.mod h1:Zw9Xc835DdcQS6J/yLQ0U6r9SLS3SXwyGWwN0WS4xPw=
 github.com/prometheus/client_golang v0.9.1/go.mod h1:7SWBe2y4D6OKWSNQJUaRYU/AaXPKyh/dDVn+NZz0KFw=
