@@ -2,6 +2,7 @@ package add
 
 import (
 	"fmt"
+
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/profclems/go-dotenv"
 	"github.com/profclems/tfa/totp"
@@ -11,11 +12,11 @@ import (
 )
 
 type Options struct {
-	Name   string
-	Code   string
+	Name     string
+	Code     string
 	Override bool
-	IO     *iomanip.IO
-	Config *dotenv.DotEnv
+	IO       *iomanip.IO
+	Config   *dotenv.DotEnv
 }
 
 func NewAddCmd(iom *iomanip.IO, cfg *dotenv.DotEnv, runFunc func() error) *cobra.Command {
@@ -71,7 +72,7 @@ func addRun(opts *Options) error {
 	if err != nil {
 		return err
 	}
-	if value, isSet := opts.Config.Config[otp.Name]; isSet && value != nil{
+	if value, isSet := opts.Config.Config[otp.Name]; isSet && value != nil {
 		prompt := &survey.Confirm{
 			Message: "Do you want to override?",
 			Default: false,

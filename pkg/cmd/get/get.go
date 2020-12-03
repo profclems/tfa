@@ -2,6 +2,8 @@ package get
 
 import (
 	"fmt"
+	"strings"
+
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/atotto/clipboard"
 	"github.com/profclems/go-dotenv"
@@ -9,7 +11,6 @@ import (
 	"github.com/profclems/tfa/utils"
 	"github.com/profclems/tfa/utils/iomanip"
 	"github.com/spf13/cobra"
-	"strings"
 )
 
 type Options struct {
@@ -26,10 +27,10 @@ func NewGetCmd(iom *iomanip.IO, cfg *dotenv.DotEnv, runFunc func() error) *cobra
 	}
 
 	var getCmd = &cobra.Command{
-		Use:     "get",
-		Short:   "Get the OTP for an account",
-		Long:    ``,
-		Args:    cobra.MaximumNArgs(1),
+		Use:   "get",
+		Short: "Get the OTP for an account",
+		Long:  ``,
+		Args:  cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 1 {
 				opts.Name = strings.ToUpper(args[0])

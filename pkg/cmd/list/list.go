@@ -2,8 +2,9 @@ package list
 
 import (
 	"fmt"
-	"github.com/profclems/go-dotenv"
 	"time"
+
+	"github.com/profclems/go-dotenv"
 
 	"github.com/gosuri/uilive"
 	"github.com/profclems/glab/pkg/tableprinter"
