@@ -1,0 +1,138 @@
+project_name: tfa
+
+release:
+  prerelease: auto
+  
+before:
+  hooks:
+    - go mod tidy
+    
+builds:
+  - main: ./cmd/tfa
+    env:
+      - CGO_ENABLED=0
+    ldflags:
+      - -s -w -X ./internal/build.Version={{.Version}} -X ./internal/build.Date={{time "2006-01-02"}}
+  - <<: &build_defaults
+      binary: bin/tfa
+      main: ./cmd/tfa
+    id: macos
+    goos: [darwin]
+    goarch: [amd64]
+
+  - <<: *build_defaults
+    id: linux
+    goos: [linux]
+    goarch: [386, amd64]
+
+  - <<: *build_defaults
+    id: windows
+    goos: [windows]
+    goarch: [386, amd64]
+
+archives:
+  - replacements:
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+      386: i386
+      amd64: x86_64
+    allow_different_binary_count: true
+
+  - id: nix
+    builds: [macos, linux]
+    <<: &archive_defaults
+      name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
+    wrap_in_directory: false
+    allow_different_binary_count: true
+    replacements:
+      darwin: macOS
+      linux: Linux
+    format: tar.gz
+
+  - id: windows
+    builds: [windows]
+    <<: *archive_defaults
+    wrap_in_directory: false
+    allow_different_binary_count: true
+    format: zip
+
+scoop:
+  url_template: "http://github.com/profclems/tfa/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+  # Repository to push the app manifest to.
+  bucket:
+    owner: profclems
+    name: scoop-tfa
+  commit_author:
+    name: Clement Sam
+    email: clementsam75@gmail.com
+  commit_msg_template: "Scoop update for {{ .ProjectName }} version {{ .Tag }}"
+  homepage: "https://github.com/profclems/tfa"
+  description: "Super cool two-factor authentication command line app"
+  license: MIT
+  persist:
+    - ".tfa-cli"
+    - ".env"
+
+brews:
+  - name: tfa
+    ids:
+      - nix
+    description: "Super cool two-factor authentication command line app"
+    commit_author:
+      name: Clement Sam
+      email: clementsam75@gmail.com
+    folder: Formula
+    goarm: 6
+    tap:
+      owner: profclems
+      name: homebrew-tap
+    url_template: "http://github.com/profclems/tfa/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    # Packages your package depends on.
+    homepage: "https://github.com/profclems/tfa"
+    dependencies:
+      - name: git
+    install: bin.install "bin/tfa"
+    test: |
+      system "#{bin}/tfa version"
+      
+nfpms:
+  -
+    id: foo
+    package_name: tfa
+    file_name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+    # Build IDs for the builds you want to create NFPM packages for.
+    # Defaults to all builds.
+
+    replacements:
+      amd64: x86_64
+      386: i386
+      darwin: macOS
+      linux: Linux
+    vendor: Clement Sam
+    homepage: https://github.com/profclems/tfa
+    maintainer: Clement Sam <clementsam75@gmail.com>
+    description: Super cool two-factor authentication command line app
+    license: MIT
+    formats:
+      - deb
+      - rpm
+    dependencies:
+      - git
+    # Override default /usr/local/bin destination for binaries
+    bindir: /usr/local/bin
+
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - '^Merge pull request'
+      - '^chore'
+      - '^Update README.md'
