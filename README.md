@@ -19,3 +19,12 @@ Flags:
 
 Use "tfa [command] --help" for more information about a command.
 ```
+
+## Installation
+
+Download a binary suitable for your OS at the [releases](https://github.com/profclems/tfa/releases/latest) page.
+
+If you have `go` installed, run:
+```
+$ go get -v github.com/profclems/tfa/cmd/tfa
+```
