@@ -32,5 +32,7 @@ $ go get -v github.com/profclems/tfa/cmd/tfa
 ### Quick Install (Bash)
 You can install or update `tfa` with:
 
+```bash
 curl -s https://raw.githubusercontent.com/profclems/tfa/main/install.sh | sudo bash
-Installs into usr/local/bin
+```
+Installs into `usr/local/bin`
