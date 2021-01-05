@@ -28,3 +28,9 @@ If you have `go` installed, run:
 ```
 $ go get -v github.com/profclems/tfa/cmd/tfa
 ```
+
+### Quick Install (Bash)
+You can install or update `tfa` with:
+
+curl -s https://raw.githubusercontent.com/profclems/tfa/main/install.sh | sudo bash
+Installs into usr/local/bin
