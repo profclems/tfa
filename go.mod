@@ -14,6 +14,6 @@ require (
 	github.com/profclems/glab v1.13.1
 	github.com/profclems/go-dotenv v0.1.1
 	github.com/spf13/cobra v1.1.1
-	github.com/stretchr/testify v1.6.1
+	github.com/stretchr/testify v1.7.0
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 )
