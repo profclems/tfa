@@ -4,7 +4,7 @@ go 1.15
 
 require (
 	github.com/AlecAivazis/survey/v2 v2.2.8
-	github.com/atotto/clipboard v0.1.2
+	github.com/atotto/clipboard v0.1.4
 	github.com/google/renameio v1.0.0 // indirect
 	github.com/gosuri/uilive v0.0.4
 	github.com/mattn/go-colorable v0.1.8
