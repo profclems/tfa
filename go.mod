@@ -3,7 +3,7 @@ module github.com/profclems/tfa
 go 1.15
 
 require (
-	github.com/AlecAivazis/survey/v2 v2.2.13
+	github.com/AlecAivazis/survey/v2 v2.2.14
 	github.com/atotto/clipboard v0.1.4
 	github.com/google/renameio v1.0.0 // indirect
 	github.com/gosuri/uilive v0.0.4
