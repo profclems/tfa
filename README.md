@@ -26,7 +26,11 @@ Download a binary suitable for your OS at the [releases](https://github.com/prof
 
 If you have `go` installed, run:
 ```
-$ go get -v github.com/profclems/tfa/cmd/tfa
+go get -v github.com/profclems/tfa/cmd/tfa
+```
+or 
+```
+go install github.com/profclems/tfa/cmd/tfa@latest
 ```
 
 ### Quick Install (Bash)
