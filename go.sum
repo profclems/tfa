@@ -308,8 +308,8 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/posener/complete v1.1.1/go.mod h1:em0nMJCgc9GFtwrmVmEMR/ZL6WyhyjMBndrE9hABlRI=
 github.com/profclems/glab v1.18.1 h1:61vlfyiVbo1LA1ghtQJ89pcBsAZIvjyrCtFyklHwRB0=
 github.com/profclems/glab v1.18.1/go.mod h1:lbaxX4cP+jMOUHZBZ8S9an9gmUJXtMloiHrQD8yBpFg=
-github.com/profclems/go-dotenv v0.1.1 h1:t+JjAwSHxBFlkqnWmc4ZHUHU8w4i5dYjLLWE5xK9OYk=
-github.com/profclems/go-dotenv v0.1.1/go.mod h1:Zw9Xc835DdcQS6J/yLQ0U6r9SLS3SXwyGWwN0WS4xPw=
+github.com/profclems/go-dotenv v0.1.2 h1:LRYhelv0dueEwvkkM9QAhz8Dg9NZPL1qBX7v+oat+dM=
+github.com/profclems/go-dotenv v0.1.2/go.mod h1:Zw9Xc835DdcQS6J/yLQ0U6r9SLS3SXwyGWwN0WS4xPw=
 github.com/prometheus/client_golang v0.9.1/go.mod h1:7SWBe2y4D6OKWSNQJUaRYU/AaXPKyh/dDVn+NZz0KFw=
 github.com/prometheus/client_golang v0.9.3/go.mod h1:/TN21ttK/J9q6uSwhBd54HahCDft0ttaMvbicHlPoso=
 github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910/go.mod h1:MbSGuTsp3dbXC40dX6PRTWyKYBIrTGTE9sqQNg2J8bo=
