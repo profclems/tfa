@@ -3,7 +3,7 @@ module github.com/profclems/tfa
 go 1.15
 
 require (
-	github.com/AlecAivazis/survey/v2 v2.3.2
+	github.com/AlecAivazis/survey/v2 v2.3.5
 	github.com/atotto/clipboard v0.1.4
 	github.com/gosuri/uilive v0.0.4
 	github.com/mattn/go-colorable v0.1.12
